@@ -297,6 +297,27 @@
 })();
 </script>
 
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* запрет прокрутки */
+    touch-action: none; /* отключает скролл при свайпах */
+    background: #0b0b0f;
+  }
+</style>
+<script>
+  // Настройка размеров канваса под экран
+  const canvas = document.getElementById("game");
+  const ctx = canvas.getContext("2d");
+
+  // Делаем канвас чуть меньше экрана
+  const size = Math.min(window.innerWidth, window.innerHeight) - 40;
+  canvas.width = size;
+  canvas.height = size;
+</script>
+
 <!-- Баннер с рекламой ТГ канала -->
 <div class="channel-info" style="margin-top:20px; border:1px solid #ccc; border-radius:12px; padding:12px; background:#fff; color:#000; text-align:center;">
   <div class="title" style="font-weight:800; font-size:15px; margin-bottom:6px;">
@@ -316,3 +337,4 @@
 
 </body>
 </html>
+
